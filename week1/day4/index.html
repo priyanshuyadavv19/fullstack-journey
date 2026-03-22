@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshu's Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- navigation bar -->
+  <nav class="navbar">
+    <!-- logo on the left -->
+    <div class="logo">Priyanshu</div>
+    
+    <!-- links on the right -->
+     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+     </ul>
+  </nav>
+
+  <!-- hero section -->
+  <header class="hero" id="about">
+    <div class="hero-content">
+      
+      <h1>Hi, I am <span class="highlight">Priyanshu Kumar Yadav</span></h1>
+      <p class="subtitle">Aspiring full stack developer.</p>
+      <p class="bio">I am on my way to become full stack developer and currently learning HTML,CSS and JavaScript.</p>
+
+      <a href="#contact" class="btn">Get in Touch</a>
+
+    </div>
+  </header>
+
+  <!-- skills section -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    
+    <div class="skills-grid">
+      
+      <div class="skills-card">
+        <h3>Linux</h3>
+        <p>Terminal navigation, file system and permission</p>
+      </div>
+      
+      <div class="skills-card">
+        <h3>Git</h3>
+        <p>Version Control, how to commit and push on GitHub </p>
+      </div>
+      
+      <div class="skills-card">
+        <h3>HTML</h3>
+        <p>Semantic tags, learn different types of input in a form</p>
+      </div>
+      
+      <div class="skills-card">
+        <h3>CSS</h3>
+        <p>Box model, Position property, Z-index, Flexbox, Grid </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+  <form class="contact-form">
+
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" 
+             placeholder="Enter name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" 
+             placeholder="you@gmail.com" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" 
+                placeholder="Your message..."></textarea>
+    </div>
+
+    <button type="submit" class="btn">Send message</button>
+
+  </form>
+</section>
+
+  <footer class="footer">
+    <p>Built by Priyanshu Kumar Yadav as a part of my fullstack journey.</p> 
+  </footer>
+</body>
+</html>
