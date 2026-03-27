@@ -1,9 +1,26 @@
 :root {
-  --primary: #6c63ff;
-  --dark: #2d2d2d;
-  --gray: #777777;
-  --white: #ffffff;
-  --light: #f5f5f5;
+  --primary: #564fe9;
+  /* background color */
+  --prim_back_white: #ffffff;
+  --sec_back_light: #f5f5f5;
+  /* text color */
+  --prim_text_black: #2d2d2d;
+  --sec_text_gray: #777777;
+  --ter_text_white: #ffffff;
+  /* border color */
+  --border_light: #e2e8f0;
+  --border_light_sec: #e2e8f0;
+}
+
+body.dark-mode {
+  /* background color */
+  --prim_back_white: #1e293b;
+  --sec_back_light: #0f172a;
+  /* text color */
+  --prim_text_black: #ffffff;
+  --sec_text_gray: #dce6f0;
+  /* border color */
+  --border_light_sec: #334155;
 }
 
 * {
@@ -18,7 +35,7 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  color: var(--dark);
+  color: var(--prim_text_black);
   line-height: 1.6;
 }
 
@@ -26,10 +43,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
+  background-color: var(--prim_back_white);
   position: sticky;
   top: 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border_light);
   padding: 16px 40px;
   z-index: 100;
 }
@@ -48,7 +65,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--gray);
+  color: var(--sec_text_gray);
   font-size: 16px;
 }
 
@@ -56,12 +73,28 @@ body {
   color: var(--primary);
 }
 
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary);
+  color: var(--ter_text_white);
+}
+
 .hero {
   min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--light);
+  background-color: var(--sec_back_light);
   padding: 60px 40px;
   text-align: center;
 }
@@ -111,13 +144,13 @@ body {
 }
 
 .subtitle {
-  color: var(--gray);
+  color: var(--sec_text_gray);
   font-size: 20px;
   margin-bottom: 12px;
 }
 
 .bio {
-  color: var(--gray);
+  color: var(--sec_text_gray);
   max-width: 500px;
   margin: 0 auto 32px;
 }
@@ -125,7 +158,7 @@ body {
 .btn {
   display: inline-block;
   background: var(--primary);
-  color: var(--white);
+  color: var(--ter_text_white);
   padding: 12px 32px;
   border-radius: 6px;
   text-decoration: none;
@@ -136,13 +169,13 @@ body {
 }
 
 .btn:hover {
-  background: #5a52d5;
+  background-color: #5a52d5;
 }
 
 .skills {
   padding: 80px 40px;
   text-align: center;
-  background: var(--white);
+  background-color: var(--prim_back_white);
 }
 
 .skills h2 {
@@ -160,8 +193,8 @@ body {
 }
 
 .skills-card {
-  background: var(--white);
-  border: 1px solid #e2e8f0;
+  background-color: var(--prim_back_white);
+  border: 1px solid var(--border_light);
   border-radius: 10px;
   padding: 24px;
   width: 170px;
@@ -178,13 +211,13 @@ body {
 }
 
 .skills-card p {
-  color: var(--gray);
+  color: var(--sec_text_gray);
   font-size: 14px;
 }
 
 .contact {
   padding: 80px 40px;
-  background: var(--light);
+  background-color: var(--sec_back_light);
   text-align: center;
 }
 
@@ -208,18 +241,25 @@ body {
   margin-bottom: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--prim_text_black);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid #e2e8f0;
+  background-color: var(--prim_back_white);
+  color: var(--prim_text_black);
+  border: 1px solid var(--border_light_sec);
   border-radius: 6px;
   font-size: 15px;
   outline: none;
   font-family: 'Segoe UI', sans-serif;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+  color: #b4b9c0;
 }
 
 .form-group input:focus,
@@ -229,18 +269,19 @@ body {
 
 .footer {
   text-align: center;
+  background-color: var(--prim_back_white);
   padding: 24px;
-  color: var(--gray);
+  color: var(--sec_text_gray);
   font-size: 14px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--border_light);
 }
 
 .back-to-top {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: var(--primary);
-  color: var(--white);
+  background-color: var(--primary);
+  color: #ffffff;
   border-radius: 50%;
   text-decoration: none;
   width: 44px;
@@ -252,7 +293,7 @@ body {
 }
 
 .back-to-top:hover {
-  background: #827cf5;
+  background-color: #827cf5;
 }
 
 .section-title::after {
@@ -260,7 +301,7 @@ body {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--primary);
+  background-color: var(--primary);
   margin: 8px auto 0;
 }
 
