@@ -1,0 +1,42 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 500px;
+  min-height: 700px;
+  background-color: bisque;
+  margin: 32px auto;
+  padding: 24px 12px;
+}
+
+.heading {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+#task-input {
+  flex-grow: 1;
+}
+
+#add-task-btn {
+  border-radius: 18px;
+  border: none;
+  padding: 5px 12px;
+  background-color: cyan;
+  cursor: pointer;
+}
+
+#add-task-btn:hover {
+  background-color: rgb(15, 190, 190);
+}
