@@ -6,7 +6,7 @@ function Mirror() {
   }
   return (
     <div>
-      <input onChange={handleChange} />
+      <input value={text} onChange={handleChange} />
       <p>{text === "" ? "Start typing....." : text}</p>
     </div>
   )
