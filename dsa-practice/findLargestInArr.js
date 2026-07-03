@@ -7,5 +7,5 @@ function findLargest(arr) {
   }
   return currTar
 }
-const exArr = [3, 7, 2, 9, 4]
+const exArr = [3, 7, 2, 9, 4, 9]
 console.log(findLargest(exArr))
