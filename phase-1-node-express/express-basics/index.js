@@ -43,6 +43,19 @@ app.delete("/tasks/:id", (req, res) => {
     res.status(404).send("Data doesn't exist!")
   }
 })
+app.use((req, res) => {
+  res.status(404).json({error: "This path doesn't exist."})
+})
+app.use((err, req, res, next) => {
+  const errorStatus = err.status || 500
+  res.status(errorStatus)
+  if (errorStatus >= 400 && errorStatus < 500) {
+    res.json({error: err.message})
+  } else {
+    res.json({error: "Internal Server Error."})
+  }
+  console.error(err)
+})
 app.listen(3000, () => {
   console.log("Server is running on the port 3000")
 })
